@@ -1,3 +1,5 @@
+
+
 /** @format */
 
 let arr = [
@@ -6,22 +8,44 @@ let arr = [
   { id: 3, name: "karen", age: "19", profession: "admin" },
 ];
 
+// 1. Print Developer by Map
 function PrintDeveloperbyMap() {
-  //Write your code here , just console.log
+  arr.map((employee) => {
+    if (employee.profession === "developer") {
+      console.log(employee);
+    }
+  });
 }
 
+// 2. Print Developer by ForEach
 function PrintDeveloperbyForEach() {
-  //Write your code here , just console.log
+  arr.forEach((employee) => {
+    if (employee.profession === "developer") {
+      console.log(employee);
+    }
+  });
 }
 
+// 3. Add Data
 function addData() {
-  //Write your code here, just console.log
+  let newEmployee = { id: 4, name: "susan", age: "20", profession: "intern" };
+  arr.push(newEmployee);
+  console.log(arr);
 }
 
+// 4. Remove Admin
 function removeAdmin() {
-  //Write your code here, just console.log
+  let filteredArray = arr.filter((employee) => employee.profession !== "admin");
+  console.log(filteredArray);
 }
 
-function concatenateArray() {
-  //Write your code here, just console.log
+// 5. Concatenate Array
+function ConcatinateArray() {
+  let newArray = [
+    { id: 5, name: "david", age: "25", profession: "designer" },
+    { id: 6, name: "sarah", age: "22", profession: "manager" },
+    { id: 7, name: "mike", age: "24", profession: "tester" }
+  ];
+  let combinedArray = arr.concat(newArray);
+  console.log(combinedArray);
 }
